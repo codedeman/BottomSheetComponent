@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-class BSCPopUpCell : UITableViewCell {
+public class BSCPopUpCell : UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

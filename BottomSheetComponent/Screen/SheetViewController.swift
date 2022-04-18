@@ -17,10 +17,11 @@ public class SheetViewController: UIViewController {
     }
     
     
-    func configurePopUp<Item:PopupSectionModel,Cell:BSCPopUpCell> (
+  public func configurePopUp<Item:PopupSectionModel,Cell:BSCPopUpCell> (
         title:String,
         canSearch:Bool,
         cellClass:Cell.Type,
+        dataSource:[Item],
         configCell : @escaping ((Cell,Item,Int) -> Void),
         onSelectItem : @escaping ((Item,_ index:Int) -> Void)
     
