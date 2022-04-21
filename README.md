@@ -1,4 +1,4 @@
-#BCSComponent 
+##BCSComponent 
 
 first thing first you have to implement frame work look like this 
 ```swift
