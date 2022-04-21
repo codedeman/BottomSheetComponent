@@ -24,11 +24,12 @@ class ViewController: UIViewController {
         let vc = SheetViewController()
 //        
         vc.configurePopUp(title: "Account", canSearch: false, cellClass:BillSimpleCell.self , dataSource: dataSource) { [weak self] cell, model, index in
-            
-            
+            cell.label.text = model.accountName
         } onSelectItem: { model, index in
-            
+            print("test selected \(model.accountName)")
         }
+        
+        self.present(vc, animated: true)
 
         
     }

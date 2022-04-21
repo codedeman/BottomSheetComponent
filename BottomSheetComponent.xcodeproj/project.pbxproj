@@ -23,6 +23,7 @@
 		30C5C0DB280C24880051E37D /* BottomSheetExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C0DA280C24880051E37D /* BottomSheetExampleUITests.swift */; };
 		30C5C0DD280C24880051E37D /* BottomSheetExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C0DC280C24880051E37D /* BottomSheetExampleUITestsLaunchTests.swift */; };
 		30C5C0E9280C27860051E37D /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C0E8280C27860051E37D /* SheetViewController.swift */; };
+		30E58B4B28117D2C0069B6AB /* CellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58B4A28117D2C0069B6AB /* CellCustom.swift */; };
 		30ED9FC2280DB20A00C19DEB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED9FC1280DB20A00C19DEB /* UserModel.swift */; };
 		30ED9FC4280DB4B900C19DEB /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED9FC3280DB4B900C19DEB /* SimpleCell.swift */; };
 		30FB55B2280C4AFD0014DC25 /* BottomSheetComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C5C099280C246A0051E37D /* BottomSheetComponent.framework */; platformFilter = ios; };
@@ -83,6 +84,7 @@
 		30C5C0DA280C24880051E37D /* BottomSheetExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetExampleUITests.swift; sourceTree = "<group>"; };
 		30C5C0DC280C24880051E37D /* BottomSheetExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30C5C0E8280C27860051E37D /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		30E58B4A28117D2C0069B6AB /* CellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCustom.swift; sourceTree = "<group>"; };
 		30ED9FC1280DB20A00C19DEB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		30ED9FC3280DB4B900C19DEB /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
 		30FB55B8280C4EA40014DC25 /* PopupSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupSectionModel.swift; sourceTree = "<group>"; };
@@ -226,12 +228,21 @@
 		30C5C0E7280C257F0051E37D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				30E58B4928117CC00069B6AB /* CellCustom */,
 				30AB782C28112BFC00EB3BF4 /* Base */,
 				30FB55BA280C4FC30014DC25 /* PopUp */,
 				30FB55B7280C4E760014DC25 /* UIComponent */,
 				30C5C0E8280C27860051E37D /* SheetViewController.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		30E58B4928117CC00069B6AB /* CellCustom */ = {
+			isa = PBXGroup;
+			children = (
+				30E58B4A28117D2C0069B6AB /* CellCustom.swift */,
+			);
+			path = CellCustom;
 			sourceTree = "<group>";
 		};
 		30ED9FBF280DB16A00C19DEB /* Cell */ = {
@@ -478,6 +489,7 @@
 				30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */,
 				30FB55BC280C50430014DC25 /* BSCPopUp.swift in Sources */,
 				30FB55B9280C4EA40014DC25 /* PopupSectionModel.swift in Sources */,
+				30E58B4B28117D2C0069B6AB /* CellCustom.swift in Sources */,
 				30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

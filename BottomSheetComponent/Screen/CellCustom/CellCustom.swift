@@ -1,19 +1,19 @@
 //
-//  SimpleCell.swift
-//  BottomSheetExample
+//  CellCustom.swift
+//  BottomSheetComponent
 //
-//  Created by Pham Kien on 18.04.22.
+//  Created by Pham Kien on 21.04.22.
 //
 
 import UIKit
-class BillSimpleCell : UITableViewCell {
+
+
+class CellCustom:UITableViewCell {
     
-  
-     var label : UILabel = {
+    private lazy var label : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 2
-        label.textColor = UIColor.black
         return label
     }()
     
@@ -55,8 +55,6 @@ class BillSimpleCell : UITableViewCell {
     }
     
     func commonInit() {
-        self.label.text = "What the hell"
-        
         self.addSubview(stack)
         self.stack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         self.stack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true

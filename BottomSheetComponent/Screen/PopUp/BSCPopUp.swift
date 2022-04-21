@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-public class BSCPopUpCell : UITableViewCell {
+ class BSCPopUpCell : UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,13 +21,16 @@ public class BSCPopUpCell : UITableViewCell {
     
     func commonInit() {
         
+        
     }
 }
 
-final class BSCPopUp<Item:PopupSectionModel,Cell:BSCPopUpCell>:UIView,UITableViewDelegate,UITableViewDataSource {
+final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITableViewDelegate,UITableViewDataSource {
     
     public var dataSource : [Item] = []
     public var configureCell : ((Cell, Item, Int) -> Void)?
+    public var selectHandler : ((Item,_ index:Int) -> Void)?
+
 
     private lazy var tableView : UITableView = {
         let table = UITableView()
@@ -43,10 +46,29 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:BSCPopUpCell>:UIView,UITableVie
         return table
     }()
     
+    private lazy var mainStack : UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [tableView])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.isLayoutMarginsRelativeArrangement = true
+        stack.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 24, right: 16)
+        stack.axis = .vertical
+        stack.spacing = 16
+        stack.distribution = .fill
+        return stack
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+//        self.addSubview(tableView)
+        self.addSubview(mainStack)
+        mainStack.topAnchor.constraint(equalTo: self.topAnchor, constant: 12).isActive = true
+        mainStack.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        mainStack.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        mainStack.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         tableView.register(Cell.self, forCellReuseIdentifier: "\(Cell.self)")
-
+        print("Cell \(Cell.self)")
+        
+        
     }
     
     required init?(coder: NSCoder) {
@@ -72,6 +94,17 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:BSCPopUpCell>:UIView,UITableVie
         }
         configureCell?(cell,item,indexPath.row)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let item = dataSource[indexPath.row]
+        
+        if let select = selectHandler {
+            select(item,indexPath.row)
+        }
+//        self.dismiss(animated: true, completion: nil)
+        
     }
     
     

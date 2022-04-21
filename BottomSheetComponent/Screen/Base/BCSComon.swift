@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+//
+//func bcsScreenWidth() -> CGFloat {
+//    return UIScreen.main.bounds.size.width
+//}
+//func bcsScreenHeight() -> CGFloat {
+//    return UIScreen.main.bounds.size.height
+//}
