@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
- class BSCPopUpCell : UITableViewCell {
+class BSCPopUpCell : UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -66,7 +66,8 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         mainStack.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         mainStack.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         tableView.register(Cell.self, forCellReuseIdentifier: "\(Cell.self)")
-        print("Cell \(Cell.self)")
+        tableView.separatorColor = .clear
+        debugPrint("cell \(Cell.self)")
         
         
     }

@@ -20,11 +20,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTabOpenBottomSheet(_ sender: Any) {
-        let dataSource = [UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test")]
+        let dataSource = [UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DEV"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "BA"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DM")]
         let vc = SheetViewController()
-//        
-        vc.configurePopUp(title: "Account", canSearch: false, cellClass:BillSimpleCell.self , dataSource: dataSource) { [weak self] cell, model, index in
-            cell.label.text = model.accountName
+        vc.modalPresentationStyle = .overFullScreen
+        vc.configurePopUp(title: "Account", canSearch: false, cellClass:BillSimpleCell.self , dataSource: dataSource) {  cell, model, index in
+            cell.label.text = model.typeAccount
         } onSelectItem: { model, index in
             print("test selected \(model.accountName)")
         }
