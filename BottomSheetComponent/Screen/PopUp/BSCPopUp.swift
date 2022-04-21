@@ -24,7 +24,7 @@ public class BSCPopUpCell : UITableViewCell {
     }
 }
 
-final class BSCPopUp<Item:PopupSectionModel,Cell:BSCPopUpCell>:UIViewController,UITableViewDelegate,UITableViewDataSource {
+final class BSCPopUp<Item:PopupSectionModel,Cell:BSCPopUpCell>:UIView,UITableViewDelegate,UITableViewDataSource {
     
     public var dataSource : [Item] = []
     public var configureCell : ((Cell, Item, Int) -> Void)?
@@ -43,11 +43,23 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:BSCPopUpCell>:UIViewController,
         return table
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         tableView.register(Cell.self, forCellReuseIdentifier: "\(Cell.self)")
 
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        tableView.register(Cell.self, forCellReuseIdentifier: "\(Cell.self)")
+//
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count

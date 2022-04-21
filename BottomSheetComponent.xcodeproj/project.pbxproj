@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AB782B28112BD000EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782A28112BD000EB3BF4 /* BCSComon.swift */; };
+		30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782D28112C1200EB3BF4 /* BCSComon.swift */; };
 		30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C09D280C246B0051E37D /* BottomSheetComponent.docc */; };
 		30C5C0A4280C246B0051E37D /* BottomSheetComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C5C099280C246A0051E37D /* BottomSheetComponent.framework */; };
 		30C5C0A9280C246B0051E37D /* BottomSheetComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C0A8280C246B0051E37D /* BottomSheetComponentTests.swift */; };
@@ -60,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30AB782A28112BD000EB3BF4 /* BCSComon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSComon.swift; sourceTree = "<group>"; };
+		30AB782D28112C1200EB3BF4 /* BCSComon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSComon.swift; sourceTree = "<group>"; };
 		30C5C099280C246A0051E37D /* BottomSheetComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BottomSheetComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C5C09C280C246B0051E37D /* BottomSheetComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSheetComponent.h; sourceTree = "<group>"; };
 		30C5C09D280C246B0051E37D /* BottomSheetComponent.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = BottomSheetComponent.docc; sourceTree = "<group>"; };
@@ -126,6 +130,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30AB782928112A8000EB3BF4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				30AB782A28112BD000EB3BF4 /* BCSComon.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		30AB782C28112BFC00EB3BF4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				30AB782D28112C1200EB3BF4 /* BCSComon.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		30C5C08F280C246A0051E37D = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +192,7 @@
 		30C5C0B8280C24860051E37D /* BottomSheetExample */ = {
 			isa = PBXGroup;
 			children = (
+				30AB782928112A8000EB3BF4 /* Base */,
 				30ED9FC0280DB1DD00C19DEB /* Model */,
 				30ED9FBF280DB16A00C19DEB /* Cell */,
 				30C5C0B9280C24860051E37D /* AppDelegate.swift */,
@@ -205,6 +226,7 @@
 		30C5C0E7280C257F0051E37D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				30AB782C28112BFC00EB3BF4 /* Base */,
 				30FB55BA280C4FC30014DC25 /* PopUp */,
 				30FB55B7280C4E760014DC25 /* UIComponent */,
 				30C5C0E8280C27860051E37D /* SheetViewController.swift */,
@@ -453,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C5C0E9280C27860051E37D /* SheetViewController.swift in Sources */,
+				30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */,
 				30FB55BC280C50430014DC25 /* BSCPopUp.swift in Sources */,
 				30FB55B9280C4EA40014DC25 /* PopupSectionModel.swift in Sources */,
 				30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */,
@@ -476,6 +499,7 @@
 				30ED9FC2280DB20A00C19DEB /* UserModel.swift in Sources */,
 				30C5C0BC280C24860051E37D /* SceneDelegate.swift in Sources */,
 				30ED9FC4280DB4B900C19DEB /* SimpleCell.swift in Sources */,
+				30AB782B28112BD000EB3BF4 /* BCSComon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

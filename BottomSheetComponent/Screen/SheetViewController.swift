@@ -26,9 +26,8 @@ public class SheetViewController: UIViewController {
         onSelectItem : @escaping ((Item,_ index:Int) -> Void)
     
     ) {
-        let popup = BSCPopUp<Item,Cell>()
-        self.present(popup, animated: true)
-
+        let popup = BSCPopUp<Item,Cell>.init(frame:CGRect(x: 0, y: 0, width: <#T##Double#>, height: <#T##Double#>) )
+        
     }
     
     
