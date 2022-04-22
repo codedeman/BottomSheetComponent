@@ -18,7 +18,7 @@ public class SheetViewController: UIViewController {
     }
     
     
-  public func configurePopUp<Item:PopupSectionModel,Cell:UITableViewCell> (
+  public func showBCSheet<Item:PopupSectionModel,Cell:UITableViewCell> (
         title:String,
         canSearch:Bool,
         cellClass:Cell.Type,
@@ -38,7 +38,7 @@ public class SheetViewController: UIViewController {
         popup.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
         popup.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
         popup.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
-        popup.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 400).isActive = true
+        popup.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
         
     }
     

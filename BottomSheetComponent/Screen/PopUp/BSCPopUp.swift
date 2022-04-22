@@ -45,15 +45,57 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         table.dataSource = self
         return table
     }()
+    private lazy var searchView:BCSSearchView = {
+        let searchBar = BCSSearchView()
     
-    private lazy var mainStack : UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [tableView])
+        searchBar.backgroundColor = .purple
+        searchBar.layoutMargins = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        return searchBar
+    }()
+    
+    
+    private lazy var searchCloseStack : UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [searchView])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .horizontal
+        stack.backgroundColor = .green
+        stack.distribution = .fillEqually
+        stack.alignment = .leading
+        stack.spacing = 12
+        return stack
+    }()
+    
+    private let titleLabel : UILabel = {
+        let label = UILabel()
+        label.text = "Code ăn trộm"
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var stackHeader:UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [titleLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.isLayoutMarginsRelativeArrangement = true
-        stack.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 24, right: 16)
+        stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
+        stack.axis = .horizontal
+        stack.spacing = 16
+        stack.distribution = .fill
+        return stack
+    }()
+    
+    private lazy var mainStack : UIStackView = {
+        searchView.heightAnchor.constraint(equalToConstant: 36).isActive = false
+        searchCloseStack.heightAnchor.constraint(equalToConstant: 36).isActive = false
+        let stack = UIStackView(arrangedSubviews: [stackHeader,searchCloseStack,tableView])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.isLayoutMarginsRelativeArrangement = true
+        stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
         stack.axis = .vertical
         stack.spacing = 16
         stack.distribution = .fill
+    
         return stack
     }()
     
@@ -61,10 +103,15 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         super.init(frame: frame)
 //        self.addSubview(tableView)
         self.addSubview(mainStack)
+        
         mainStack.topAnchor.constraint(equalTo: self.topAnchor, constant: 12).isActive = true
         mainStack.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         mainStack.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         mainStack.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        
+        
+
         tableView.register(Cell.self, forCellReuseIdentifier: "\(Cell.self)")
         tableView.separatorColor = .clear
         debugPrint("cell \(Cell.self)")

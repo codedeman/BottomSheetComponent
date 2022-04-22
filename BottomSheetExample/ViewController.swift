@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .gray
         
         
         // Do any additional setup after loading the view.
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
         let dataSource = [UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DEV"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "BA"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DM")]
         let vc = SheetViewController()
         vc.modalPresentationStyle = .overFullScreen
-        vc.configurePopUp(title: "Account", canSearch: false, cellClass:BillSimpleCell.self , dataSource: dataSource) {  cell, model, index in
+        vc.showBCSheet(title: "Account", canSearch: false, cellClass:BillSimpleCell.self , dataSource: dataSource) {  cell, model, index in
             cell.label.text = model.typeAccount
         } onSelectItem: { model, index in
             print("test selected \(model.accountName)")
