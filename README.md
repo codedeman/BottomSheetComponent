@@ -65,7 +65,6 @@ In viewController you want to use you can call func to show BCSComponent look li
 - [x] Show cell custom 
 - [] Panel to drag smoothly
 - [] Search on a list 
-- [] Show recently used emoji section on top
 - [] Dark mode
 - [] Clean code
 
