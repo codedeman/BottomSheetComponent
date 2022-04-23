@@ -30,6 +30,7 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
     public var dataSource : [Item] = []
     public var configureCell : ((Cell, Item, Int) -> Void)?
     public var selectHandler : ((Item,_ index:Int) -> Void)?
+    private var searchedItems : [Item] = []
 
 
     private lazy var tableView : UITableView = {
@@ -45,26 +46,77 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         table.dataSource = self
         return table
     }()
+    private lazy var searchView:BCSSearchView = {
+        let searchBar = BCSSearchView()
     
-    private lazy var mainStack : UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [tableView])
+        searchBar.delegate = self
+//        searchBar.backgroundColor = .purple
+        searchBar.layoutMargins = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.backgroundColor = .red
+        return searchBar
+    }()
+    
+    
+    private lazy var searchCloseStack : UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [searchView])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.axis = .horizontal
+        stack.backgroundColor = .green
+        stack.distribution = .fillEqually
+        stack.alignment = .leading
+        stack.spacing = 12
+        return stack
+    }()
+    
+    private let titleLabel : UILabel = {
+        let label = UILabel()
+        label.text = "Code ăn trộm"
+        label.textColor = .red
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var stackHeader:UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [titleLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.isLayoutMarginsRelativeArrangement = true
-        stack.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 24, right: 16)
+        stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
+        stack.axis = .horizontal
+        stack.spacing = 0
+        stack.distribution = .fill
+        return stack
+    }()
+    
+    private lazy var mainStack : UIStackView = {
+       
+        let stack = UIStackView(arrangedSubviews: [stackHeader,searchCloseStack,tableView])
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.isLayoutMarginsRelativeArrangement = true
+        stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
         stack.axis = .vertical
         stack.spacing = 16
         stack.distribution = .fill
+    
         return stack
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        searchView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        searchCloseStack.heightAnchor.constraint(equalToConstant: 50).isActive = true
 //        self.addSubview(tableView)
         self.addSubview(mainStack)
+        
         mainStack.topAnchor.constraint(equalTo: self.topAnchor, constant: 12).isActive = true
         mainStack.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         mainStack.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         mainStack.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        
+        
+
         tableView.register(Cell.self, forCellReuseIdentifier: "\(Cell.self)")
         tableView.separatorColor = .clear
         debugPrint("cell \(Cell.self)")
@@ -106,6 +158,34 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         }
 //        self.dismiss(animated: true, completion: nil)
         
+    }
+    
+    
+    
+}
+
+extension BSCPopUp:SearchBarDelegate {
+    func searchBarTextBeginChange(_ searchBar: BCSSearchView) {
+       
+        
+    }
+    
+    func searchBarTextDidChange(_ searchBar: BCSSearchView) {
+        let searchText = searchBar.textField.text
+        searchedItems = dataSource.filter({ (item) -> Bool in
+            return item.search(with: searchText ?? "")
+        })
+        
+        self.dataSource = searchedItems
+        self.tableView.reloadData()
+    }
+    
+    func searchBarEndEditting(_ searchBar: BCSSearchView) {
+//        let searchText = searchBar.textField.text
+//
+//        searchedItems = dataSource.filter({ (item) -> Bool in
+//            return item.search(with: searchText ?? "")
+//        })
     }
     
     

@@ -7,9 +7,9 @@
 
 import UIKit
 
+
 public class SheetViewController: UIViewController {
 
-    
     public override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .clear
@@ -18,7 +18,7 @@ public class SheetViewController: UIViewController {
     }
     
     
-  public func configurePopUp<Item:PopupSectionModel,Cell:UITableViewCell> (
+  public func showBCSheet<Item:PopupSectionModel,Cell:UITableViewCell> (
         title:String,
         canSearch:Bool,
         cellClass:Cell.Type,
@@ -29,7 +29,7 @@ public class SheetViewController: UIViewController {
         
         let popup = BSCPopUp<Item,Cell>()
         self.view.addSubview(popup)
-        popup.backgroundColor = .black
+        popup.backgroundColor = .white
         popup.dataSource = dataSource
         popup.configureCell = configCell
         popup.selectHandler = onSelectItem
@@ -38,7 +38,9 @@ public class SheetViewController: UIViewController {
         popup.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
         popup.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
         popup.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
-        popup.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 400).isActive = true
+        
+        popup.heightAnchor.constraint(equalToConstant: 800).isActive = true
+
         
     }
     
