@@ -53,7 +53,7 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
 //        searchBar.backgroundColor = .purple
         searchBar.layoutMargins = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
         searchBar.translatesAutoresizingMaskIntoConstraints = false
-        searchBar.backgroundColor = .red
+//        searchBar.backgroundColor = .red
         return searchBar
     }()
     

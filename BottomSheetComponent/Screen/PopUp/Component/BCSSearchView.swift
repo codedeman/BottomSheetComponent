@@ -62,7 +62,7 @@ class BCSSearchView:UIView{
     func initUI() {
         self.backgroundColor = .gray
         textField.delegate = self
-
+        self.layer.cornerRadius = 10
         addSubview(imageView)
         addSubview(textField)
         NSLayoutConstraint.activate([
@@ -89,8 +89,13 @@ extension BCSSearchView : UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        delegate?.searchBarEndEditting(self)
+        delegate?.searchBarTextDidChange(self)
         layer.borderColor = UIColor.white.withAlphaComponent(0.8).cgColor
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        delegate?.searchBarTextDidChange(self)
+        return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
