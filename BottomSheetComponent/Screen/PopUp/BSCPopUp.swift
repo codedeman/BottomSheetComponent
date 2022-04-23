@@ -30,6 +30,7 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
     public var dataSource : [Item] = []
     public var configureCell : ((Cell, Item, Int) -> Void)?
     public var selectHandler : ((Item,_ index:Int) -> Void)?
+    private var searchedItems : [Item] = []
 
 
     private lazy var tableView : UITableView = {
@@ -48,9 +49,11 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
     private lazy var searchView:BCSSearchView = {
         let searchBar = BCSSearchView()
     
-        searchBar.backgroundColor = .purple
+        searchBar.delegate = self
+//        searchBar.backgroundColor = .purple
         searchBar.layoutMargins = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
         searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.backgroundColor = .red
         return searchBar
     }()
     
@@ -69,7 +72,7 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
     private let titleLabel : UILabel = {
         let label = UILabel()
         label.text = "Code ăn trộm"
-        label.textColor = .white
+        label.textColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -80,14 +83,13 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         stack.isLayoutMarginsRelativeArrangement = true
         stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
         stack.axis = .horizontal
-        stack.spacing = 16
+        stack.spacing = 0
         stack.distribution = .fill
         return stack
     }()
     
     private lazy var mainStack : UIStackView = {
-        searchView.heightAnchor.constraint(equalToConstant: 36).isActive = false
-        searchCloseStack.heightAnchor.constraint(equalToConstant: 36).isActive = false
+       
         let stack = UIStackView(arrangedSubviews: [stackHeader,searchCloseStack,tableView])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.isLayoutMarginsRelativeArrangement = true
@@ -101,6 +103,9 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        searchView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        searchCloseStack.heightAnchor.constraint(equalToConstant: 50).isActive = true
 //        self.addSubview(tableView)
         self.addSubview(mainStack)
         
@@ -153,6 +158,34 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         }
 //        self.dismiss(animated: true, completion: nil)
         
+    }
+    
+    
+    
+}
+
+extension BSCPopUp:SearchBarDelegate {
+    func searchBarTextBeginChange(_ searchBar: BCSSearchView) {
+       
+        
+    }
+    
+    func searchBarTextDidChange(_ searchBar: BCSSearchView) {
+        let searchText = searchBar.textField.text
+        searchedItems = dataSource.filter({ (item) -> Bool in
+            return item.search(with: searchText ?? "")
+        })
+        
+        self.dataSource = searchedItems
+        self.tableView.reloadData()
+    }
+    
+    func searchBarEndEditting(_ searchBar: BCSSearchView) {
+//        let searchText = searchBar.textField.text
+//
+//        searchedItems = dataSource.filter({ (item) -> Bool in
+//            return item.search(with: searchText ?? "")
+//        })
     }
     
     

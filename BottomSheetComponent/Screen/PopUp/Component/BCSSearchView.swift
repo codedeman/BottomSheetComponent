@@ -8,8 +8,21 @@
 import Foundation
 import UIKit
 
+
+protocol SearchBarDelegate : AnyObject {
+    func searchBarTextBeginChange(_ searchBar: BCSSearchView)
+    func searchBarTextDidChange(_ searchBar: BCSSearchView)
+    func searchBarEndEditting(_ searchBar: BCSSearchView)
+    func searchBarEndButtonDidTap()
+}
+
+extension SearchBarDelegate {
+    // Optional Delegeted
+    func searchBarEndButtonDidTap() { return }
+}
+
 class BCSSearchView:UIView{
-    
+    public weak var delegate: SearchBarDelegate?
     
     private let imageView : UIImageView = {
         let view = UIImageView()
@@ -19,10 +32,11 @@ class BCSSearchView:UIView{
     }()
     
     var textField:UITextField = {
-        let txt = UITextField()
-        txt.translatesAutoresizingMaskIntoConstraints = false
-        txt.placeholder = "Search"
-        return txt
+        let txtView = UITextField()
+        txtView.translatesAutoresizingMaskIntoConstraints = false
+//        txtView.delegate = self
+        txtView.placeholder = "Search"
+        return txtView
         
     }()
 
@@ -34,16 +48,7 @@ class BCSSearchView:UIView{
     }()
 
 
-//    private lazy var mainStack : UIStackView = {
-//        let stack = UIStackView(arrangedSubviews: [txtSearch])
-//        stack.translatesAutoresizingMaskIntoConstraints = false
-//        stack.isLayoutMarginsRelativeArrangement = true
-//        stack.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 24, right: 16)
-//        stack.axis = .horizontal
-//        stack.spacing = 16
-//        stack.distribution = .fill
-//        return stack
-//    }()
+
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,6 +60,9 @@ class BCSSearchView:UIView{
     }
     
     func initUI() {
+        self.backgroundColor = .gray
+        textField.delegate = self
+
         addSubview(imageView)
         addSubview(textField)
         NSLayoutConstraint.activate([
@@ -70,4 +78,23 @@ class BCSSearchView:UIView{
     }
     
     
+}
+
+
+
+extension BCSSearchView : UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        delegate?.searchBarTextBeginChange(self)
+//        layer.borderColor = UIColor(red: 194/255, green: 168/255, blue: 124/255, alpha: 0.7).cgColor
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        delegate?.searchBarEndEditting(self)
+        layer.borderColor = UIColor.white.withAlphaComponent(0.8).cgColor
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.searchBarEndButtonDidTap()
+        return true
+    }
 }
