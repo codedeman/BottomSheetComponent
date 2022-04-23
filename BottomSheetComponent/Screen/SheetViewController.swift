@@ -23,6 +23,7 @@ public class SheetViewController: UIViewController {
         canSearch:Bool,
         cellClass:Cell.Type,
         dataSource:[Item],
+        roundTop:CGFloat,
         configCell : @escaping ((Cell,Item,Int) -> Void),
         onSelectItem : @escaping ((Item,_ index:Int) -> Void)
     ) {
@@ -33,12 +34,11 @@ public class SheetViewController: UIViewController {
         popup.dataSource = dataSource
         popup.configureCell = configCell
         popup.selectHandler = onSelectItem
-        popup.roundTopCorner(30)
+        popup.bscroundTopCorner(roundTop)
         popup.translatesAutoresizingMaskIntoConstraints = false
         popup.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true
         popup.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0).isActive = true
         popup.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
-        
         popup.heightAnchor.constraint(equalToConstant: 800).isActive = true
 
         

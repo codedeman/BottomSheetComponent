@@ -48,12 +48,9 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
     }()
     private lazy var searchView:BCSSearchView = {
         let searchBar = BCSSearchView()
-    
         searchBar.delegate = self
-//        searchBar.backgroundColor = .purple
         searchBar.layoutMargins = UIEdgeInsets(top: 12, left: 16, bottom: 12, right: 16)
         searchBar.translatesAutoresizingMaskIntoConstraints = false
-//        searchBar.backgroundColor = .red
         return searchBar
     }()
     
@@ -84,7 +81,8 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
         stack.axis = .horizontal
         stack.spacing = 0
-        stack.distribution = .fill
+        stack.backgroundColor = .red
+        stack.distribution = .equalCentering
         return stack
     }()
     

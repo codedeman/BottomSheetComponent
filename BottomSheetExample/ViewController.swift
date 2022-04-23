@@ -23,11 +23,15 @@ class ViewController: UIViewController {
     @IBAction func didTabOpenBottomSheet(_ sender: Any) {
         let dataSource = [UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DEV"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "BA"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DM")]
         let vc = SheetViewController()
-        vc.modalPresentationStyle = .overFullScreen
-        vc.showBCSheet(title: "Account", canSearch: false, cellClass:BillSimpleCell.self , dataSource: dataSource) {  cell, model, index in
+        vc.modalPresentationStyle = .currentContext
+        vc.showBCSheet(title: "Account",
+                       canSearch: false,
+                       cellClass:BillSimpleCell.self ,
+                       dataSource: dataSource,
+                       roundTop: 20) {  cell, model, index in
             cell.label.text = model.typeAccount
         } onSelectItem: { model, index in
-            print("test selected \(model.accountName)")
+            print("test selected \(String(describing: model.accountName))")
         }
         
         self.present(vc, animated: true)

@@ -12,27 +12,27 @@ import UIKit
 extension UIView {
     
     
-    func roundTopCorner(_ radius: CGFloat) {
+    func bscroundTopCorner(_ radius: CGFloat) {
         if #available(iOS 11.0, *) {
             self.layer.cornerRadius = radius
             //self.clipsToBounds = true
             self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         } else {
-            self.roundCorners([.topLeft, .topRight], radius: radius)
+            self.bscroundCorners([.topLeft, .topRight], radius: radius)
         }
     }
     
-    func roundBottomCorner(_ radius: CGFloat) {
+    func bscroundBottomCorner(_ radius: CGFloat) {
         if #available(iOS 11.0, *) {
             self.layer.cornerRadius = radius
             self.clipsToBounds = true
             self.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         } else {
-            self.roundCorners([.bottomLeft, .bottomRight], radius: radius)
+            self.bscroundCorners([.bottomLeft, .bottomRight], radius: radius)
         }
     }
     
-    func roundCorners(_ corners:UIRectCorner, radius: CGFloat) {
+    func bscroundCorners(_ corners:UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
