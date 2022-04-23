@@ -6,6 +6,22 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		30B9BA532814614D0019B07C /* BCSXC */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 30B9BA562814614D0019B07C /* Build configuration list for PBXAggregateTarget "BCSXC" */;
+			buildPhases = (
+				30B9BA5B281461630019B07C /* ShellScript */,
+			);
+			dependencies = (
+				30B9BA582814615C0019B07C /* PBXTargetDependency */,
+				30B9BA5A2814615C0019B07C /* PBXTargetDependency */,
+			);
+			name = BCSXC;
+			productName = BCSXC;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		30AB782B28112BD000EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782A28112BD000EB3BF4 /* BCSComon.swift */; };
 		30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782D28112C1200EB3BF4 /* BCSComon.swift */; };
@@ -35,6 +51,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		30B9BA572814615C0019B07C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C5C090280C246A0051E37D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30C5C098280C246A0051E37D;
+			remoteInfo = BottomSheetComponent;
+		};
+		30B9BA592814615C0019B07C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C5C090280C246A0051E37D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30E086ED281391390034ECFA;
+			remoteInfo = BottomSheetResource;
+		};
 		30C5C0A5280C246B0051E37D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30C5C090280C246A0051E37D /* Project object */;
@@ -449,6 +479,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					30B9BA532814614D0019B07C = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					30C5C098280C246A0051E37D = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
@@ -490,6 +523,7 @@
 				30C5C0CB280C24880051E37D /* BottomSheetExampleTests */,
 				30C5C0D5280C24880051E37D /* BottomSheetExampleUITests */,
 				30E086ED281391390034ECFA /* BottomSheetResource */,
+				30B9BA532814614D0019B07C /* BCSXC */,
 			);
 		};
 /* End PBXProject section */
@@ -543,6 +577,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30B9BA5B281461630019B07C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30C5C095280C246A0051E37D /* Sources */ = {
@@ -607,6 +661,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		30B9BA582814615C0019B07C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30C5C098280C246A0051E37D /* BottomSheetComponent */;
+			targetProxy = 30B9BA572814615C0019B07C /* PBXContainerItemProxy */;
+		};
+		30B9BA5A2814615C0019B07C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30E086ED281391390034ECFA /* BottomSheetResource */;
+			targetProxy = 30B9BA592814615C0019B07C /* PBXContainerItemProxy */;
+		};
 		30C5C0A6280C246B0051E37D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 30C5C098280C246A0051E37D /* BottomSheetComponent */;
@@ -650,6 +714,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		30B9BA542814614D0019B07C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VE4B6ZGW6Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		30B9BA552814614D0019B07C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VE4B6ZGW6Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		30C5C0AB280C246B0051E37D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1053,6 +1135,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		30B9BA562814614D0019B07C /* Build configuration list for PBXAggregateTarget "BCSXC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30B9BA542814614D0019B07C /* Debug */,
+				30B9BA552814614D0019B07C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		30C5C093280C246A0051E37D /* Build configuration list for PBXProject "BottomSheetComponent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

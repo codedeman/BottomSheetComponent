@@ -17,7 +17,7 @@ class UserModel:PopupSectionModel {
     }
     
     func search(with text: String) -> Bool {
-        return self.accountName == text
+        return self.typeAccount?.uppercased() == text.uppercased()
     }
     
     init(isSelected:Bool,

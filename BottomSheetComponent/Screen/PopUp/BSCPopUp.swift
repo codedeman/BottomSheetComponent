@@ -31,6 +31,8 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
     public var configureCell : ((Cell, Item, Int) -> Void)?
     public var selectHandler : ((Item,_ index:Int) -> Void)?
     private var searchedItems : [Item] = []
+    public var searchedItemsCache : [Item] = []
+
 
 
     private lazy var tableView : UITableView = {
@@ -81,7 +83,7 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
         stack.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 24, right: 0)
         stack.axis = .horizontal
         stack.spacing = 0
-        stack.backgroundColor = .red
+//        stack.backgroundColor = .red
         stack.distribution = .equalCentering
         return stack
     }()
@@ -173,17 +175,14 @@ extension BSCPopUp:SearchBarDelegate {
         searchedItems = dataSource.filter({ (item) -> Bool in
             return item.search(with: searchText ?? "")
         })
-        
+        print("search item:\(searchedItems.count)")
         self.dataSource = searchedItems
         self.tableView.reloadData()
     }
     
     func searchBarEndEditting(_ searchBar: BCSSearchView) {
-//        let searchText = searchBar.textField.text
-//
-//        searchedItems = dataSource.filter({ (item) -> Bool in
-//            return item.search(with: searchText ?? "")
-//        })
+        self.dataSource = searchedItemsCache
+        self.tableView.reloadData()
     }
     
     

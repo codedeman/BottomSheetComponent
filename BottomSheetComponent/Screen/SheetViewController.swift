@@ -34,6 +34,7 @@ public class SheetViewController: UIViewController {
         popup.dataSource = dataSource
         popup.configureCell = configCell
         popup.selectHandler = onSelectItem
+        popup.searchedItemsCache = dataSource
         popup.bscroundTopCorner(roundTop)
         popup.translatesAutoresizingMaskIntoConstraints = false
         popup.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0).isActive = true

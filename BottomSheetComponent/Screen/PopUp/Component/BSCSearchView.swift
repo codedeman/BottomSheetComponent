@@ -63,6 +63,7 @@ class BCSSearchView:UIView{
         self.backgroundColor = .gray
         textField.delegate = self
         self.layer.cornerRadius = 10
+        self.textField.addTarget(self, action: #selector(textFieldEditingChanged), for: .allEditingEvents)
         addSubview(imageView)
         addSubview(textField)
         NSLayoutConstraint.activate([
@@ -78,18 +79,28 @@ class BCSSearchView:UIView{
     }
     
     
+    @objc func textFieldEditingChanged(_ textField: UITextField) {
+        if textField.text?.count == 0 {
+            self.delegate?.searchBarEndEditting(self)
+        } else {
+            self.delegate?.searchBarTextDidChange(self)
+        }
+    }
+
+    
+    
 }
 
 
 
 extension BCSSearchView : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        delegate?.searchBarTextBeginChange(self)
+//        delegate?.searchBarTextBeginChange(self)
 //        layer.borderColor = UIColor(red: 194/255, green: 168/255, blue: 124/255, alpha: 0.7).cgColor
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        delegate?.searchBarTextDidChange(self)
+//        delegate?.searchBarTextDidChange(self)
         layer.borderColor = UIColor.white.withAlphaComponent(0.8).cgColor
     }
     
@@ -99,7 +110,7 @@ extension BCSSearchView : UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        delegate?.searchBarEndButtonDidTap()
+//        delegate?.searchBarEndButtonDidTap()
         return true
     }
 }
