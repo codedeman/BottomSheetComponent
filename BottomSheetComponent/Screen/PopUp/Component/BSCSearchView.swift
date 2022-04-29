@@ -13,6 +13,7 @@ protocol SearchBarDelegate : AnyObject {
     func searchBarTextBeginChange(_ searchBar: BCSSearchView)
     func searchBarTextDidChange(_ searchBar: BCSSearchView)
     func searchBarEndEditting(_ searchBar: BCSSearchView)
+    func searchTextChange(_ text:String)
     func searchBarEndButtonDidTap()
 }
 
@@ -61,7 +62,7 @@ class BCSSearchView:UIView{
     
     func initUI() {
         self.backgroundColor = .gray
-        textField.delegate = self
+//        textField.delegate = self
         self.layer.cornerRadius = 10
         self.textField.addTarget(self, action: #selector(textFieldEditingChanged), for: .allEditingEvents)
         addSubview(imageView)
@@ -83,7 +84,7 @@ class BCSSearchView:UIView{
         if textField.text?.count == 0 {
             self.delegate?.searchBarEndEditting(self)
         } else {
-            self.delegate?.searchBarTextDidChange(self)
+            self.delegate?.searchTextChange(textField.text ?? "")
         }
     }
 
@@ -93,24 +94,24 @@ class BCSSearchView:UIView{
 
 
 
-extension BCSSearchView : UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        delegate?.searchBarTextBeginChange(self)
-//        layer.borderColor = UIColor(red: 194/255, green: 168/255, blue: 124/255, alpha: 0.7).cgColor
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-//        delegate?.searchBarTextDidChange(self)
-        layer.borderColor = UIColor.white.withAlphaComponent(0.8).cgColor
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        delegate?.searchBarTextDidChange(self)
-        return true
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        delegate?.searchBarEndButtonDidTap()
-        return true
-    }
-}
+//extension BCSSearchView : UITextFieldDelegate {
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+////        delegate?.searchBarTextBeginChange(self)
+////        layer.borderColor = UIColor(red: 194/255, green: 168/255, blue: 124/255, alpha: 0.7).cgColor
+//    }
+//
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+////        delegate?.searchBarTextDidChange(self)
+//        layer.borderColor = UIColor.white.withAlphaComponent(0.8).cgColor
+//    }
+//
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+////        delegate?.searchBarTextDidChange(self)
+//        return true
+//    }
+//
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+////        delegate?.searchBarEndButtonDidTap()
+//        return true
+//    }
+//}

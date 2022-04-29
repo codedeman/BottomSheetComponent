@@ -129,12 +129,7 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
     }
     
     
-    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        tableView.register(Cell.self, forCellReuseIdentifier: "\(Cell.self)")
-//
-//    }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
@@ -165,6 +160,22 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
 }
 
 extension BSCPopUp:SearchBarDelegate {
+    func searchTextChange(_ text: String) {
+        
+        print("DM \(text)")
+        searchedItems = dataSource.filter({ (item) -> Bool in
+            return item.search(with: text )
+        })
+        print("search item:\(searchedItems.count)")
+        self.dataSource = searchedItems
+        if dataSource.count == 0 {
+            dataSource = searchedItemsCache
+        }
+        self.tableView.reloadData()
+
+        
+    }
+    
     func searchBarTextBeginChange(_ searchBar: BCSSearchView) {
        
         
@@ -172,12 +183,8 @@ extension BSCPopUp:SearchBarDelegate {
     
     func searchBarTextDidChange(_ searchBar: BCSSearchView) {
         let searchText = searchBar.textField.text
-        searchedItems = dataSource.filter({ (item) -> Bool in
-            return item.search(with: searchText ?? "")
-        })
-        print("search item:\(searchedItems.count)")
-        self.dataSource = searchedItems
-        self.tableView.reloadData()
+        
+       
     }
     
     func searchBarEndEditting(_ searchBar: BCSSearchView) {

@@ -18,7 +18,7 @@ public class SheetViewController: UIViewController {
     }
     
     
-  public func showBCSheet<Item:PopupSectionModel,Cell:UITableViewCell> (
+  public func showBSCPopup<Item:PopupSectionModel,Cell:UITableViewCell> (
         title:String,
         canSearch:Bool,
         cellClass:Cell.Type,
@@ -42,6 +42,11 @@ public class SheetViewController: UIViewController {
         popup.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
         popup.heightAnchor.constraint(equalToConstant: 800).isActive = true
 
+        
+    }
+    public func showBSCSheetWithView(uiview:UIView) {
+        
+        
         
     }
     

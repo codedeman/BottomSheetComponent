@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         let dataSource = [UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DEV"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "BA"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DM")]
         let vc = SheetViewController()
         vc.modalPresentationStyle = .currentContext
-        vc.showBCSheet(title: "Account",
+        vc.showBSCPopup(title: "Account",
                        canSearch: false,
                        cellClass:BillSimpleCell.self ,
                        dataSource: dataSource,
