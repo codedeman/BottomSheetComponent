@@ -604,7 +604,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nSCHEME_NAME=\"BottomSheetComponent\"\nFRAMEWORK_NAME=\"BottomSheetComponent\"\nDEVICE_ARCHIVE_PATH=\"../output/BottomSheetComponent.xcarchive\"\n\nxcodebuild archive \\\n-scheme ${SCHEME_NAME} \\\n-destination \"generic/platform=iOS\" \\\n-archivePath ${DEVICE_ARCHIVE_PATH} \\\nSKIP_INSTALL=NO \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES\nxcodebuild -create-xcframework \\\n-framework ${DEVICE_ARCHIVE_PATH}/Products/Library/Frameworks/BottomSheetComponent.framework \\\n-output ./xcframework/BottomSheetComponent.xcframework\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1109,6 +1109,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VE4B6ZGW6Y;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";
@@ -1130,6 +1131,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VE4B6ZGW6Y;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = "";

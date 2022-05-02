@@ -15,14 +15,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R1t-C8-L0F">
-                    <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                    <rect key="frame" x="0.0" y="84" width="414" height="778"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-KG-Rd6">
-                    <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn số thẻ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wv-pV-ncs">
+                            <rect key="frame" x="161" y="9.5" width="92" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tij-Fb-P8m">
+                            <rect key="frame" x="314" y="0.0" width="100" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="noe-Bw-pjb"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Đóng"/>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="LOz-Ye-qnY"/>
+                        <constraint firstAttribute="trailing" secondItem="Tij-Fb-P8m" secondAttribute="trailing" id="1XV-v8-Dki"/>
+                        <constraint firstItem="6Wv-pV-ncs" firstAttribute="centerY" secondItem="ZRT-KG-Rd6" secondAttribute="centerY" id="7Fr-qp-FtI"/>
+                        <constraint firstAttribute="height" constant="40" id="LOz-Ye-qnY"/>
+                        <constraint firstItem="Tij-Fb-P8m" firstAttribute="top" secondItem="ZRT-KG-Rd6" secondAttribute="top" id="TAj-ZS-r5r"/>
+                        <constraint firstAttribute="bottom" secondItem="Tij-Fb-P8m" secondAttribute="bottom" id="TEg-Mk-TON"/>
+                        <constraint firstItem="6Wv-pV-ncs" firstAttribute="centerX" secondItem="ZRT-KG-Rd6" secondAttribute="centerX" id="aOP-Rh-tjC"/>
                     </constraints>
                 </view>
             </subviews>
@@ -37,6 +59,10 @@
                 <constraint firstItem="ZRT-KG-Rd6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="m1x-eE-m7o"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZRT-KG-Rd6" secondAttribute="trailing" id="vGH-tf-6xL"/>
             </constraints>
+            <connections>
+                <outlet property="tableView" destination="R1t-C8-L0F" id="JHo-V8-UsE"/>
+                <outlet property="vHeader" destination="ZRT-KG-Rd6" id="MHo-M9-uh3"/>
+            </connections>
             <point key="canvasLocation" x="139" y="86"/>
         </view>
     </objects>

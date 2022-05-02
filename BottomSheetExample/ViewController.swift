@@ -45,7 +45,9 @@ class ViewController: UIViewController {
         let vc = SheetViewController()
         
         let view = PopCustomView.createFromXIB()
+        view.backgroundColor = .red
         vc.showBSCSheetWithView(uiview: view)
+//        vc.modalPresentationStyle = .
         self.present(vc, animated: true)
     }
     
