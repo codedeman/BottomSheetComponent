@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "UIView+VVXUI.h"
 //! Project version number for BottomSheetComponent.
 FOUNDATION_EXPORT double BottomSheetComponentVersionNumber;
 

@@ -26,6 +26,8 @@
 		3047127E281EBE7C00407E2E /* PopCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3047127D281EBE7C00407E2E /* PopCustomView.swift */; };
 		30471280281EBE8800407E2E /* PopCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3047127F281EBE8800407E2E /* PopCustomView.xib */; };
 		30471282281EC4FF00407E2E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30471281281EC4FF00407E2E /* UIView+Extension.swift */; };
+		3050731E28203B00004B8513 /* UIView+VVXUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3050731C28203B00004B8513 /* UIView+VVXUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3050731F28203B00004B8513 /* UIView+VVXUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3050731D28203B00004B8513 /* UIView+VVXUI.m */; };
 		30AB782B28112BD000EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782A28112BD000EB3BF4 /* BCSComon.swift */; };
 		30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782D28112C1200EB3BF4 /* BCSComon.swift */; };
 		30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C09D280C246B0051E37D /* BottomSheetComponent.docc */; };
@@ -102,6 +104,8 @@
 		3047127D281EBE7C00407E2E /* PopCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCustomView.swift; sourceTree = "<group>"; };
 		3047127F281EBE8800407E2E /* PopCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopCustomView.xib; sourceTree = "<group>"; };
 		30471281281EC4FF00407E2E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3050731C28203B00004B8513 /* UIView+VVXUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VVXUI.h"; sourceTree = "<group>"; };
+		3050731D28203B00004B8513 /* UIView+VVXUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VVXUI.m"; sourceTree = "<group>"; };
 		30AB782A28112BD000EB3BF4 /* BCSComon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSComon.swift; sourceTree = "<group>"; };
 		30AB782D28112C1200EB3BF4 /* BCSComon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSComon.swift; sourceTree = "<group>"; };
 		30C5C099280C246A0051E37D /* BottomSheetComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BottomSheetComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,15 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		3050731B28203AE5004B8513 /* ThirdParties */ = {
+			isa = PBXGroup;
+			children = (
+				3050731C28203B00004B8513 /* UIView+VVXUI.h */,
+				3050731D28203B00004B8513 /* UIView+VVXUI.m */,
+			);
+			path = ThirdParties;
+			sourceTree = "<group>";
+		};
 		30AB782928112A8000EB3BF4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +250,7 @@
 		30C5C09B280C246A0051E37D /* BottomSheetComponent */ = {
 			isa = PBXGroup;
 			children = (
+				3050731B28203AE5004B8513 /* ThirdParties */,
 				30E086F22813915E0034ECFA /* Resources */,
 				30C5C0E7280C257F0051E37D /* Screen */,
 				30C5C09C280C246B0051E37D /* BottomSheetComponent.h */,
@@ -364,6 +378,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3050731E28203B00004B8513 /* UIView+VVXUI.h in Headers */,
 				30C5C0AA280C246B0051E37D /* BottomSheetComponent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +508,7 @@
 					};
 					30C5C098280C246A0051E37D = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 					};
 					30C5C0A2280C246B0051E37D = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -620,6 +636,7 @@
 				30FB55B9280C4EA40014DC25 /* PopupSectionModel.swift in Sources */,
 				30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */,
 				30E086F728139B0A0034ECFA /* UIVewExtension.swift in Sources */,
+				3050731F28203B00004B8513 /* UIView+VVXUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,6 +883,7 @@
 		30C5C0AE280C246B0051E37D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -890,6 +908,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -897,6 +916,7 @@
 		30C5C0AF280C246B0051E37D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

@@ -53,7 +53,7 @@ public class SheetViewController: UIViewController {
         
         uiview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: 0).isActive = true
         uiview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: 0).isActive = true
-        uiview.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 500).isActive = true
+        uiview.topAnchor.constraint(equalTo: self.view.topAnchor,constant: 100).isActive = true
         self.vBottomSheet = uiview
         let panGesture = UIPanGestureRecognizer(target: self, action:  #selector(handleBottomSheetPan(recognizer:)))
 
@@ -70,21 +70,9 @@ public class SheetViewController: UIViewController {
             let translation: CGFloat = recognizer.translation(in: view).y
             
             print("transaction \(translation)")
-            self.vBottomSheet.topAnchor.constraint(equalTo: self.view.topAnchor,constant: translation).isActive = true
-
+            self.vBottomSheet.vvx_nsTop().constant = translation
             break
-//            let translation: CGFloat = gestureRecognizer.translation(in: view).y
-//            let factor: CGFloat = position.constant > 0 ? overContentTransitionFactor : contentTransitionFactor
-//            transition -= translation * factor
-//            if 0..<view.safeAreaInsets.bottom ~= transition {
-//                if translation < 0 {
-//                    transition = view.safeAreaInsets.bottom
-//                } else {
-//                    transition = 0
-//                }
-//            }
-//            position.constant = transition
-//            gestureRecognizer.setTranslation(.zero, in: view)
+
         case .ended: break
 //            let velocity = gestureRecognizer.velocity(in: view).y
 //            if velocity > thresholdVelocityToClose || transition < -(sheetHeight * 0.5) {

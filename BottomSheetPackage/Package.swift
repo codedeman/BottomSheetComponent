@@ -4,16 +4,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "BottomSheetPackage",
+    name: "BottomSheetComponent",
     platforms: [.iOS(.v10)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "BottomSheetPackage",
-            targets: ["BottomSheetPackage"]),
+            name: "BottomSheetComponent",
+            targets: ["BottomSheetComponent"]),
     ],
   
     targets: [
-        .binaryTarget(name: "BottomSheetComponent", path: ".Sources/BottomSheetComponent.xcframework" )
+        .binaryTarget(name: "BottomSheetComponent", path: "./Sources/BottomSheetComponent.xcframework" )
     ]
 )
