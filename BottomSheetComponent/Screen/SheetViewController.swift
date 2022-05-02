@@ -45,8 +45,12 @@ public class SheetViewController: UIViewController {
         
     }
     public func showBSCSheetWithView(uiview:UIView) {
-        
-        
+        uiview.translatesAutoresizingMaskIntoConstraints = false
+        uiview.leadingAnchor.constraint(equalTo: self.view.leadingAnchor,constant: 0).isActive = true
+        uiview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor,constant: 0).isActive = true
+        uiview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor,constant: 0).isActive = true
+        uiview.heightAnchor.constraint(equalToConstant: 800).isActive = true
+
         
     }
     

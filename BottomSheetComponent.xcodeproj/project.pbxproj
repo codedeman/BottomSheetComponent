@@ -23,6 +23,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		3047127E281EBE7C00407E2E /* PopCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3047127D281EBE7C00407E2E /* PopCustomView.swift */; };
+		30471280281EBE8800407E2E /* PopCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3047127F281EBE8800407E2E /* PopCustomView.xib */; };
+		30471282281EC4FF00407E2E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30471281281EC4FF00407E2E /* UIView+Extension.swift */; };
 		30AB782B28112BD000EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782A28112BD000EB3BF4 /* BCSComon.swift */; };
 		30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782D28112C1200EB3BF4 /* BCSComon.swift */; };
 		30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C09D280C246B0051E37D /* BottomSheetComponent.docc */; };
@@ -96,6 +99,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3047127D281EBE7C00407E2E /* PopCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCustomView.swift; sourceTree = "<group>"; };
+		3047127F281EBE8800407E2E /* PopCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopCustomView.xib; sourceTree = "<group>"; };
+		30471281281EC4FF00407E2E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		30AB782A28112BD000EB3BF4 /* BCSComon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSComon.swift; sourceTree = "<group>"; };
 		30AB782D28112C1200EB3BF4 /* BCSComon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSComon.swift; sourceTree = "<group>"; };
 		30C5C099280C246A0051E37D /* BottomSheetComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BottomSheetComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +182,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3047127C281EBE5300407E2E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3047127D281EBE7C00407E2E /* PopCustomView.swift */,
+				3047127F281EBE8800407E2E /* PopCustomView.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		30AB782928112A8000EB3BF4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +256,7 @@
 		30C5C0B8280C24860051E37D /* BottomSheetExample */ = {
 			isa = PBXGroup;
 			children = (
+				3047127C281EBE5300407E2E /* CustomView */,
 				30AB782928112A8000EB3BF4 /* Base */,
 				30ED9FC0280DB1DD00C19DEB /* Model */,
 				30ED9FBF280DB16A00C19DEB /* Cell */,
@@ -251,6 +267,7 @@
 				30C5C0C2280C24870051E37D /* Assets.xcassets */,
 				30C5C0C4280C24870051E37D /* LaunchScreen.storyboard */,
 				30C5C0C7280C24870051E37D /* Info.plist */,
+				30471281281EC4FF00407E2E /* UIView+Extension.swift */,
 			);
 			path = BottomSheetExample;
 			sourceTree = "<group>";
@@ -275,7 +292,6 @@
 		30C5C0E7280C257F0051E37D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				30E58B4928117CC00069B6AB /* CellCustom */,
 				30AB782C28112BFC00EB3BF4 /* Base */,
 				30FB55BA280C4FC30014DC25 /* PopUp */,
 				30FB55B7280C4E760014DC25 /* Protocol */,
@@ -290,13 +306,6 @@
 				30E086F3281391AF0034ECFA /* AssetResources.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		30E58B4928117CC00069B6AB /* CellCustom */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CellCustom;
 			sourceTree = "<group>";
 		};
 		30E58B4E2811C3AB0069B6AB /* Component */ = {
@@ -551,6 +560,7 @@
 				30C5C0C6280C24870051E37D /* LaunchScreen.storyboard in Resources */,
 				30C5C0C3280C24870051E37D /* Assets.xcassets in Resources */,
 				30C5C0C1280C24860051E37D /* Main.storyboard in Resources */,
+				30471280281EBE8800407E2E /* PopCustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +637,8 @@
 			files = (
 				30C5C0BE280C24860051E37D /* ViewController.swift in Sources */,
 				30C5C0BA280C24860051E37D /* AppDelegate.swift in Sources */,
+				30471282281EC4FF00407E2E /* UIView+Extension.swift in Sources */,
+				3047127E281EBE7C00407E2E /* PopCustomView.swift in Sources */,
 				30ED9FC2280DB20A00C19DEB /* UserModel.swift in Sources */,
 				30C5C0BC280C24860051E37D /* SceneDelegate.swift in Sources */,
 				30ED9FC4280DB4B900C19DEB /* SimpleCell.swift in Sources */,

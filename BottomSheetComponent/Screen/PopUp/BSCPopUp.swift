@@ -162,7 +162,6 @@ final class BSCPopUp<Item:PopupSectionModel,Cell:UITableViewCell>:UIView,UITable
 extension BSCPopUp:SearchBarDelegate {
     func searchTextChange(_ text: String) {
         
-        print("DM \(text)")
         searchedItems = dataSource.filter({ (item) -> Bool in
             return item.search(with: text )
         })
