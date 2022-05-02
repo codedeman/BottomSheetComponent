@@ -13,11 +13,17 @@ class UserModel:PopupSectionModel {
     var accountName:String?
     var typeAccount:String?
     static func == (lhs: UserModel, rhs: UserModel) -> Bool {
-        return lhs.accountName == rhs.accountName
+        return lhs.typeAccount == rhs.typeAccount
     }
     
     func search(with text: String) -> Bool {
-        return self.accountName == text
+        if let typeAccount = self.typeAccount {
+            print("tex------ \(text) \(typeAccount)")
+            return typeAccount.folded.uppercased() == text.folded.uppercased()
+        }
+        return false
+        
+        
     }
     
     init(isSelected:Bool,
@@ -32,3 +38,12 @@ class UserModel:PopupSectionModel {
     
     
 }
+
+extension String {
+    var folded: String {
+        return self.folding(options: .diacriticInsensitive, locale: nil)
+                .replacingOccurrences(of: "đ", with: "d")
+                .replacingOccurrences(of: "Đ", with: "D")
+    }
+}
+

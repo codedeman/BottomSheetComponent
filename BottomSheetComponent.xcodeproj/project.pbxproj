@@ -6,7 +6,28 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		30B9BA532814614D0019B07C /* BCSXC */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 30B9BA562814614D0019B07C /* Build configuration list for PBXAggregateTarget "BCSXC" */;
+			buildPhases = (
+				30B9BA5B281461630019B07C /* ShellScript */,
+			);
+			dependencies = (
+				30B9BA582814615C0019B07C /* PBXTargetDependency */,
+				30B9BA5A2814615C0019B07C /* PBXTargetDependency */,
+			);
+			name = BCSXC;
+			productName = BCSXC;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		3047127E281EBE7C00407E2E /* PopCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3047127D281EBE7C00407E2E /* PopCustomView.swift */; };
+		30471280281EBE8800407E2E /* PopCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3047127F281EBE8800407E2E /* PopCustomView.xib */; };
+		30471282281EC4FF00407E2E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30471281281EC4FF00407E2E /* UIView+Extension.swift */; };
+		3050731E28203B00004B8513 /* UIView+VVXUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3050731C28203B00004B8513 /* UIView+VVXUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3050731F28203B00004B8513 /* UIView+VVXUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3050731D28203B00004B8513 /* UIView+VVXUI.m */; };
 		30AB782B28112BD000EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782A28112BD000EB3BF4 /* BCSComon.swift */; };
 		30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AB782D28112C1200EB3BF4 /* BCSComon.swift */; };
 		30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C09D280C246B0051E37D /* BottomSheetComponent.docc */; };
@@ -23,7 +44,10 @@
 		30C5C0DB280C24880051E37D /* BottomSheetExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C0DA280C24880051E37D /* BottomSheetExampleUITests.swift */; };
 		30C5C0DD280C24880051E37D /* BottomSheetExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C0DC280C24880051E37D /* BottomSheetExampleUITestsLaunchTests.swift */; };
 		30C5C0E9280C27860051E37D /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5C0E8280C27860051E37D /* SheetViewController.swift */; };
-		30E58B4D2811C39D0069B6AB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58B4C2811C39D0069B6AB /* SearchView.swift */; };
+		30E086F5281391C10034ECFA /* AssetResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E086F3281391AF0034ECFA /* AssetResources.xcassets */; };
+		30E086F728139B0A0034ECFA /* UIVewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E086F628139B0A0034ECFA /* UIVewExtension.swift */; };
+		30E58B4D2811C39D0069B6AB /* BSCSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58B4C2811C39D0069B6AB /* BSCSearchView.swift */; };
+		30E58B5028120A9A0069B6AB /* icSearch.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 30E58B4F28120A9A0069B6AB /* icSearch.pdf */; };
 		30ED9FC2280DB20A00C19DEB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED9FC1280DB20A00C19DEB /* UserModel.swift */; };
 		30ED9FC4280DB4B900C19DEB /* SimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED9FC3280DB4B900C19DEB /* SimpleCell.swift */; };
 		30FB55B2280C4AFD0014DC25 /* BottomSheetComponent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C5C099280C246A0051E37D /* BottomSheetComponent.framework */; platformFilter = ios; };
@@ -32,6 +56,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		30B9BA572814615C0019B07C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C5C090280C246A0051E37D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30C5C098280C246A0051E37D;
+			remoteInfo = BottomSheetComponent;
+		};
+		30B9BA592814615C0019B07C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30C5C090280C246A0051E37D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30E086ED281391390034ECFA;
+			remoteInfo = BottomSheetResource;
+		};
 		30C5C0A5280C246B0051E37D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 30C5C090280C246A0051E37D /* Project object */;
@@ -63,6 +101,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3047127D281EBE7C00407E2E /* PopCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCustomView.swift; sourceTree = "<group>"; };
+		3047127F281EBE8800407E2E /* PopCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopCustomView.xib; sourceTree = "<group>"; };
+		30471281281EC4FF00407E2E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3050731C28203B00004B8513 /* UIView+VVXUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VVXUI.h"; sourceTree = "<group>"; };
+		3050731D28203B00004B8513 /* UIView+VVXUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VVXUI.m"; sourceTree = "<group>"; };
 		30AB782A28112BD000EB3BF4 /* BCSComon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSComon.swift; sourceTree = "<group>"; };
 		30AB782D28112C1200EB3BF4 /* BCSComon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSComon.swift; sourceTree = "<group>"; };
 		30C5C099280C246A0051E37D /* BottomSheetComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BottomSheetComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +127,11 @@
 		30C5C0DA280C24880051E37D /* BottomSheetExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetExampleUITests.swift; sourceTree = "<group>"; };
 		30C5C0DC280C24880051E37D /* BottomSheetExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		30C5C0E8280C27860051E37D /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
-		30E58B4C2811C39D0069B6AB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		30E086EE281391390034ECFA /* BottomSheetResource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BottomSheetResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		30E086F3281391AF0034ECFA /* AssetResources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AssetResources.xcassets; sourceTree = "<group>"; };
+		30E086F628139B0A0034ECFA /* UIVewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVewExtension.swift; sourceTree = "<group>"; };
+		30E58B4C2811C39D0069B6AB /* BSCSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCSearchView.swift; sourceTree = "<group>"; };
+		30E58B4F28120A9A0069B6AB /* icSearch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = icSearch.pdf; sourceTree = "<group>"; };
 		30ED9FC1280DB20A00C19DEB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		30ED9FC3280DB4B900C19DEB /* SimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCell.swift; sourceTree = "<group>"; };
 		30FB55B8280C4EA40014DC25 /* PopupSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupSectionModel.swift; sourceTree = "<group>"; };
@@ -129,9 +176,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E086EB281391390034ECFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3047127C281EBE5300407E2E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3047127D281EBE7C00407E2E /* PopCustomView.swift */,
+				3047127F281EBE8800407E2E /* PopCustomView.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		3050731B28203AE5004B8513 /* ThirdParties */ = {
+			isa = PBXGroup;
+			children = (
+				3050731C28203B00004B8513 /* UIView+VVXUI.h */,
+				3050731D28203B00004B8513 /* UIView+VVXUI.m */,
+			);
+			path = ThirdParties;
+			sourceTree = "<group>";
+		};
 		30AB782928112A8000EB3BF4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				30AB782D28112C1200EB3BF4 /* BCSComon.swift */,
+				30E086F628139B0A0034ECFA /* UIVewExtension.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -151,9 +224,9 @@
 		30C5C08F280C246A0051E37D = {
 			isa = PBXGroup;
 			children = (
+				30C5C0B8280C24860051E37D /* BottomSheetExample */,
 				30C5C09B280C246A0051E37D /* BottomSheetComponent */,
 				30C5C0A7280C246B0051E37D /* BottomSheetComponentTests */,
-				30C5C0B8280C24860051E37D /* BottomSheetExample */,
 				30C5C0CF280C24880051E37D /* BottomSheetExampleTests */,
 				30C5C0D9280C24880051E37D /* BottomSheetExampleUITests */,
 				30C5C09A280C246A0051E37D /* Products */,
@@ -169,6 +242,7 @@
 				30C5C0B7280C24860051E37D /* BottomSheetExample.app */,
 				30C5C0CC280C24880051E37D /* BottomSheetExampleTests.xctest */,
 				30C5C0D6280C24880051E37D /* BottomSheetExampleUITests.xctest */,
+				30E086EE281391390034ECFA /* BottomSheetResource.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +250,8 @@
 		30C5C09B280C246A0051E37D /* BottomSheetComponent */ = {
 			isa = PBXGroup;
 			children = (
+				3050731B28203AE5004B8513 /* ThirdParties */,
+				30E086F22813915E0034ECFA /* Resources */,
 				30C5C0E7280C257F0051E37D /* Screen */,
 				30C5C09C280C246B0051E37D /* BottomSheetComponent.h */,
 				30C5C09D280C246B0051E37D /* BottomSheetComponent.docc */,
@@ -194,6 +270,7 @@
 		30C5C0B8280C24860051E37D /* BottomSheetExample */ = {
 			isa = PBXGroup;
 			children = (
+				3047127C281EBE5300407E2E /* CustomView */,
 				30AB782928112A8000EB3BF4 /* Base */,
 				30ED9FC0280DB1DD00C19DEB /* Model */,
 				30ED9FBF280DB16A00C19DEB /* Cell */,
@@ -204,6 +281,7 @@
 				30C5C0C2280C24870051E37D /* Assets.xcassets */,
 				30C5C0C4280C24870051E37D /* LaunchScreen.storyboard */,
 				30C5C0C7280C24870051E37D /* Info.plist */,
+				30471281281EC4FF00407E2E /* UIView+Extension.swift */,
 			);
 			path = BottomSheetExample;
 			sourceTree = "<group>";
@@ -228,7 +306,6 @@
 		30C5C0E7280C257F0051E37D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				30E58B4928117CC00069B6AB /* CellCustom */,
 				30AB782C28112BFC00EB3BF4 /* Base */,
 				30FB55BA280C4FC30014DC25 /* PopUp */,
 				30FB55B7280C4E760014DC25 /* Protocol */,
@@ -237,17 +314,18 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		30E58B4928117CC00069B6AB /* CellCustom */ = {
+		30E086F22813915E0034ECFA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				30E086F3281391AF0034ECFA /* AssetResources.xcassets */,
 			);
-			path = CellCustom;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		30E58B4E2811C3AB0069B6AB /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				30E58B4C2811C39D0069B6AB /* SearchView.swift */,
+				30E58B4C2811C39D0069B6AB /* BSCSearchView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -286,6 +364,7 @@
 		30FB55BA280C4FC30014DC25 /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
+				30E58B4F28120A9A0069B6AB /* icSearch.pdf */,
 				30E58B4E2811C3AB0069B6AB /* Component */,
 				30FB55BB280C50430014DC25 /* BSCPopUp.swift */,
 			);
@@ -299,6 +378,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3050731E28203B00004B8513 /* UIView+VVXUI.h in Headers */,
 				30C5C0AA280C246B0051E37D /* BottomSheetComponent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +476,23 @@
 			productReference = 30C5C0D6280C24880051E37D /* BottomSheetExampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		30E086ED281391390034ECFA /* BottomSheetResource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E086F1281391390034ECFA /* Build configuration list for PBXNativeTarget "BottomSheetResource" */;
+			buildPhases = (
+				30E086EA281391390034ECFA /* Sources */,
+				30E086EB281391390034ECFA /* Frameworks */,
+				30E086EC281391390034ECFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BottomSheetResource;
+			productName = BottomSheetResource;
+			productReference = 30E086EE281391390034ECFA /* BottomSheetResource.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -406,8 +503,12 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					30B9BA532814614D0019B07C = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					30C5C098280C246A0051E37D = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 					};
 					30C5C0A2280C246B0051E37D = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -422,6 +523,9 @@
 					30C5C0D5280C24880051E37D = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = 30C5C0B6280C24860051E37D;
+					};
+					30E086ED281391390034ECFA = {
+						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
@@ -443,6 +547,8 @@
 				30C5C0A2280C246B0051E37D /* BottomSheetComponentTests */,
 				30C5C0CB280C24880051E37D /* BottomSheetExampleTests */,
 				30C5C0D5280C24880051E37D /* BottomSheetExampleUITests */,
+				30E086ED281391390034ECFA /* BottomSheetResource */,
+				30B9BA532814614D0019B07C /* BCSXC */,
 			);
 		};
 /* End PBXProject section */
@@ -452,6 +558,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E58B5028120A9A0069B6AB /* icSearch.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +576,7 @@
 				30C5C0C6280C24870051E37D /* LaunchScreen.storyboard in Resources */,
 				30C5C0C3280C24870051E37D /* Assets.xcassets in Resources */,
 				30C5C0C1280C24860051E37D /* Main.storyboard in Resources */,
+				30471280281EBE8800407E2E /* PopCustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +594,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E086EC281391390034ECFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E086F5281391C10034ECFA /* AssetResources.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30B9BA5B281461630019B07C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nSCHEME_NAME=\"BottomSheetComponent\"\nFRAMEWORK_NAME=\"BottomSheetComponent\"\nDEVICE_ARCHIVE_PATH=\"../output/BottomSheetComponent.xcarchive\"\n\nxcodebuild archive \\\n-scheme ${SCHEME_NAME} \\\n-destination \"generic/platform=iOS\" \\\n-archivePath ${DEVICE_ARCHIVE_PATH} \\\nSKIP_INSTALL=NO \\\nBUILD_LIBRARY_FOR_DISTRIBUTION=YES\nxcodebuild -create-xcframework \\\n-framework ${DEVICE_ARCHIVE_PATH}/Products/Library/Frameworks/BottomSheetComponent.framework \\\n-output ./xcframework/BottomSheetComponent.xcframework\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30C5C095280C246A0051E37D /* Sources */ = {
@@ -496,9 +632,11 @@
 				30C5C0E9280C27860051E37D /* SheetViewController.swift in Sources */,
 				30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */,
 				30FB55BC280C50430014DC25 /* BSCPopUp.swift in Sources */,
-				30E58B4D2811C39D0069B6AB /* SearchView.swift in Sources */,
+				30E58B4D2811C39D0069B6AB /* BSCSearchView.swift in Sources */,
 				30FB55B9280C4EA40014DC25 /* PopupSectionModel.swift in Sources */,
 				30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */,
+				30E086F728139B0A0034ECFA /* UIVewExtension.swift in Sources */,
+				3050731F28203B00004B8513 /* UIView+VVXUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +654,8 @@
 			files = (
 				30C5C0BE280C24860051E37D /* ViewController.swift in Sources */,
 				30C5C0BA280C24860051E37D /* AppDelegate.swift in Sources */,
+				30471282281EC4FF00407E2E /* UIView+Extension.swift in Sources */,
+				3047127E281EBE7C00407E2E /* PopCustomView.swift in Sources */,
 				30ED9FC2280DB20A00C19DEB /* UserModel.swift in Sources */,
 				30C5C0BC280C24860051E37D /* SceneDelegate.swift in Sources */,
 				30ED9FC4280DB4B900C19DEB /* SimpleCell.swift in Sources */,
@@ -540,9 +680,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		30E086EA281391390034ECFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		30B9BA582814615C0019B07C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30C5C098280C246A0051E37D /* BottomSheetComponent */;
+			targetProxy = 30B9BA572814615C0019B07C /* PBXContainerItemProxy */;
+		};
+		30B9BA5A2814615C0019B07C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30E086ED281391390034ECFA /* BottomSheetResource */;
+			targetProxy = 30B9BA592814615C0019B07C /* PBXContainerItemProxy */;
+		};
 		30C5C0A6280C246B0051E37D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 30C5C098280C246A0051E37D /* BottomSheetComponent */;
@@ -586,6 +743,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		30B9BA542814614D0019B07C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VE4B6ZGW6Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		30B9BA552814614D0019B07C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VE4B6ZGW6Y;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		30C5C0AB280C246B0051E37D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -708,6 +883,7 @@
 		30C5C0AE280C246B0051E37D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -732,6 +908,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -739,6 +916,7 @@
 		30C5C0AF280C246B0051E37D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -944,9 +1122,62 @@
 			};
 			name = Release;
 		};
+		30E086EF281391390034ECFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VE4B6ZGW6Y;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vnpay.ScanID.BottomSheetResource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		30E086F0281391390034ECFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VE4B6ZGW6Y;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vnpay.ScanID.BottomSheetResource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		30B9BA562814614D0019B07C /* Build configuration list for PBXAggregateTarget "BCSXC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30B9BA542814614D0019B07C /* Debug */,
+				30B9BA552814614D0019B07C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		30C5C093280C246A0051E37D /* Build configuration list for PBXProject "BottomSheetComponent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -997,6 +1228,15 @@
 			buildConfigurations = (
 				30C5C0E5280C24880051E37D /* Debug */,
 				30C5C0E6280C24880051E37D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30E086F1281391390034ECFA /* Build configuration list for PBXNativeTarget "BottomSheetResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30E086EF281391390034ECFA /* Debug */,
+				30E086F0281391390034ECFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
