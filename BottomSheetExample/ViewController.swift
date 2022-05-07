@@ -9,6 +9,7 @@ import UIKit
 import BottomSheetComponent
 
 
+
 class ViewController: UIViewController {
 
     
@@ -23,33 +24,13 @@ class ViewController: UIViewController {
     @IBAction func didTabOpenBottomSheet(_ sender: Any) {
         
         self.configureBottomSheet()
-//        let dataSource = [UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "test"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DEV"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "BA"),UserModel.init(isSelected: false, accountName: "1010102002", typeAccount: "DM")]
-//        let vc = SheetViewController()
-//        vc.modalPresentationStyle = .currentContext
-//        vc.showBSCPopup(title: "Account",
-//                       canSearch: false,
-//                       cellClass:BillSimpleCell.self ,
-//                       dataSource: dataSource,
-//                       roundTop: 20) {  cell, model, index in
-//            cell.label.text = model.typeAccount
-//        } onSelectItem: { model, index in
-//            print("test selected \(String(describing: model.accountName))")
-//        }
-//
-//        self.present(vc, animated: true)
         
     }
     
     func configureBottomSheet() {
-        
-        let vc = SheetViewController()
-        
-        let view = PopCustomView.createFromXIB()
-        view.backgroundColor = .red
-        vc.showBSCSheetWithView(uiview: view)
-//        vc.modalPresentationStyle = .
-        self.present(vc, animated: true)
+        let sheetComponent = SheetViewController(viewController: self)
     }
+    
     
 
 }

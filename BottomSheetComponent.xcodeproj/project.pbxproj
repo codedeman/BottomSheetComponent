@@ -23,6 +23,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0A57BEB5295068A0003277B8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A57BEB4295068A0003277B8 /* UIViewController+Ext.swift */; };
+		0A57BEB729506BD9003277B8 /* BSSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A57BEB629506BD9003277B8 /* BSSize.swift */; };
+		0A57BEB929506C84003277B8 /* BSOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A57BEB829506C84003277B8 /* BSOption.swift */; };
+		0A57BEBC2950724E003277B8 /* SheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A57BEBB2950724E003277B8 /* SheetContentView.swift */; };
+		0A57BEBE2950A411003277B8 /* Yalta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A57BEBD2950A411003277B8 /* Yalta.swift */; };
+		0A7CEEBE290567D700260F2D /* BCSConfiguaration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CEEBD290567D700260F2D /* BCSConfiguaration.swift */; };
 		3047127E281EBE7C00407E2E /* PopCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3047127D281EBE7C00407E2E /* PopCustomView.swift */; };
 		30471280281EBE8800407E2E /* PopCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3047127F281EBE8800407E2E /* PopCustomView.xib */; };
 		30471282281EC4FF00407E2E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30471281281EC4FF00407E2E /* UIView+Extension.swift */; };
@@ -101,6 +107,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A57BEB4295068A0003277B8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		0A57BEB629506BD9003277B8 /* BSSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSSize.swift; sourceTree = "<group>"; };
+		0A57BEB829506C84003277B8 /* BSOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSOption.swift; sourceTree = "<group>"; };
+		0A57BEBB2950724E003277B8 /* SheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetContentView.swift; sourceTree = "<group>"; };
+		0A57BEBD2950A411003277B8 /* Yalta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yalta.swift; sourceTree = "<group>"; };
+		0A7CEEBD290567D700260F2D /* BCSConfiguaration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCSConfiguaration.swift; sourceTree = "<group>"; };
+		0A91626D2953002A0068A325 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		3047127D281EBE7C00407E2E /* PopCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCustomView.swift; sourceTree = "<group>"; };
 		3047127F281EBE8800407E2E /* PopCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopCustomView.xib; sourceTree = "<group>"; };
 		30471281281EC4FF00407E2E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -186,6 +199,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A57BEB32950686D003277B8 /* Utitils */ = {
+			isa = PBXGroup;
+			children = (
+				0A57BEB4295068A0003277B8 /* UIViewController+Ext.swift */,
+				0A57BEB629506BD9003277B8 /* BSSize.swift */,
+				0A57BEB829506C84003277B8 /* BSOption.swift */,
+				0A57BEBD2950A411003277B8 /* Yalta.swift */,
+			);
+			path = Utitils;
+			sourceTree = "<group>";
+		};
+		0A57BEBA29507237003277B8 /* SheetContentView */ = {
+			isa = PBXGroup;
+			children = (
+				0A57BEBB2950724E003277B8 /* SheetContentView.swift */,
+			);
+			path = SheetContentView;
+			sourceTree = "<group>";
+		};
 		3047127C281EBE5300407E2E /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +256,7 @@
 		30C5C08F280C246A0051E37D = {
 			isa = PBXGroup;
 			children = (
+				0A91626D2953002A0068A325 /* Package.swift */,
 				30C5C0B8280C24860051E37D /* BottomSheetExample */,
 				30C5C09B280C246A0051E37D /* BottomSheetComponent */,
 				30C5C0A7280C246B0051E37D /* BottomSheetComponentTests */,
@@ -250,6 +283,7 @@
 		30C5C09B280C246A0051E37D /* BottomSheetComponent */ = {
 			isa = PBXGroup;
 			children = (
+				0A57BEB32950686D003277B8 /* Utitils */,
 				3050731B28203AE5004B8513 /* ThirdParties */,
 				30E086F22813915E0034ECFA /* Resources */,
 				30C5C0E7280C257F0051E37D /* Screen */,
@@ -306,6 +340,7 @@
 		30C5C0E7280C257F0051E37D /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				0A57BEBA29507237003277B8 /* SheetContentView */,
 				30AB782C28112BFC00EB3BF4 /* Base */,
 				30FB55BA280C4FC30014DC25 /* PopUp */,
 				30FB55B7280C4E760014DC25 /* Protocol */,
@@ -357,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				30FB55B8280C4EA40014DC25 /* PopupSectionModel.swift */,
+				0A7CEEBD290567D700260F2D /* BCSConfiguaration.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -629,7 +665,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A57BEBC2950724E003277B8 /* SheetContentView.swift in Sources */,
 				30C5C0E9280C27860051E37D /* SheetViewController.swift in Sources */,
+				0A7CEEBE290567D700260F2D /* BCSConfiguaration.swift in Sources */,
+				0A57BEBE2950A411003277B8 /* Yalta.swift in Sources */,
+				0A57BEB5295068A0003277B8 /* UIViewController+Ext.swift in Sources */,
+				0A57BEB729506BD9003277B8 /* BSSize.swift in Sources */,
 				30AB782E28112C1200EB3BF4 /* BCSComon.swift in Sources */,
 				30FB55BC280C50430014DC25 /* BSCPopUp.swift in Sources */,
 				30E58B4D2811C39D0069B6AB /* BSCSearchView.swift in Sources */,
@@ -637,6 +678,7 @@
 				30C5C09E280C246B0051E37D /* BottomSheetComponent.docc in Sources */,
 				30E086F728139B0A0034ECFA /* UIVewExtension.swift in Sources */,
 				3050731F28203B00004B8513 /* UIView+VVXUI.m in Sources */,
+				0A57BEB929506C84003277B8 /* BSOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
