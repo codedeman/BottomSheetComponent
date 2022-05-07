@@ -12,6 +12,8 @@ let package = Package(
             name: "BottomSheetComponent",
             targets: ["BottomSheetComponent"]),
     ],
+    dependencies: [
+    ],
   
     targets: [
         .binaryTarget(name: "BottomSheetComponent", path: "./Sources/BottomSheetComponent.xcframework" )
