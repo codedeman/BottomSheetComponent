@@ -7,6 +7,14 @@
 
 import UIKit
 
+public protocol BSSheetViewControllerDelegate: AnyObject {
+    
+    
+}
+
+open class BSSheetViewController: UIViewController {
+    weak open var delegate: BSSheetViewControllerDelegate?
+}
 
 public class SheetViewController: UIViewController {
 

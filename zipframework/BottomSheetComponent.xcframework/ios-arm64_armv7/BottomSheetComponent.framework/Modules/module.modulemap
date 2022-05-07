@@ -1,0 +1,11 @@
+framework module BottomSheetComponent {
+  umbrella header "BottomSheetComponent.h"
+
+  export *
+  module * { export * }
+}
+
+module BottomSheetComponent.Swift {
+    header "BottomSheetComponent-Swift.h"
+    requires objc
+}
